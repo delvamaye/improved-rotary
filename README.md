@@ -35,11 +35,12 @@ Como se mencionó anteriormente, el algoritmo escogido es kmeans (con distancia 
 El mayor inconveniente de este algoritmo es la escogencia del número de clústers, para esto nos apalancamos en el uso del 'silhouette_score' y con la visual del gráfico 'Elbow Curve', para determinar dicho parámetro. Al ejecutar ambas metodologías, encontramos dos posibles soluciones de número de clústers. Para seleccionar el número adecuado, fue en base de la cantidad de vendedores en cada uno de los grupos generados, encontrando que es mejor escoger 3 grupos, dado que al utilizar 5 clústers generaba 2 grupos con pocos elementos, indicandonos que posiblemente hay outliers y que no nos da información suficiente de las características de dichos grupos.
 
 Finalmente, con los tres grupos se obtuvieron los centroides permitiendo caracterizar cada grupo (en función del precio promedio de venta).
--Grupo 0 (Sellers Bronce): Sellers con bajos installments en cantidad y montos, bajo promedio de venta y bajas tasas de vendido/disponible. Corresponde al 58.3% de los sellers.
 
--Grupo 1 (Sellers Plata): Sellers installments amount medio, bajo installments quantity, promedio de venta intermedio y rate quant alto. Corresponde al 7.5% de los sellers.
+- Grupo 0 (Sellers Bronce): Sellers con bajos installments en cantidad y montos, bajo promedio de venta y bajas tasas de vendido/disponible. Corresponde al 58.3% de los sellers.
 
--Grupo 2 (Sellers Oro): Sellers con mayores valores en installments amount, quantity y precio promedio vendido, mientras que la rate es baja. Corresponde al 34.1% de los sellers.
+- Grupo 1 (Sellers Plata): Sellers installments amount medio, bajo installments quantity, promedio de venta intermedio y rate quant alto. Corresponde al 7.5% de los sellers.
+
+- Grupo 2 (Sellers Oro): Sellers con mayores valores en installments amount, quantity y precio promedio vendido, mientras que la rate es baja. Corresponde al 34.1% de los sellers.
 
 #### Conclusiones
 Con la técnica utilizada de escoger las variables más relevantes, que en este caso fueron 4, y utilizar el algoritmo kmeans logramos obtener resultados coherentes para la cantidad de datos que se tenian.
